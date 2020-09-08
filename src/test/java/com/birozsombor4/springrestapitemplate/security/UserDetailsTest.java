@@ -32,6 +32,5 @@ public class UserDetailsTest {
     Assert.assertTrue(result.isAccountNonExpired());
     Assert.assertTrue(result.isAccountNonLocked());
     Assert.assertTrue(result.isCredentialsNonExpired());
-    Assert.assertFalse(result.isEnabled());
   }
 }
