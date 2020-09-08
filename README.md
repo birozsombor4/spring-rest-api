@@ -53,6 +53,7 @@ It uses following dependencies:
  - spring-boot-starter-data-jpa
  - mysql-connector-java
  - h2database
+ - flyway
  - jsonwebtoken
  - jaxb-api
  - modelmapper
@@ -445,7 +446,7 @@ If JWT doesn't contains username, returns HTTP 401 status and following object:
 
 #### Deployed version of application
 
-This template is deployed to Heroku and you can reach it on this URL: [Link]()
+This template is deployed to Heroku and you can reach it on this URL: [https://spring-rest-api-template.herokuapp.com/](https://spring-rest-api-template.herokuapp.com/)
 
 The deployed application doesn't contain email verification logic so you can try it out via [Potman](https://www.postman.com/) or [Hoppscotch
 ](https://hoppscotch.io/).
