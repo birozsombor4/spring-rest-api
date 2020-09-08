@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    /* Todo: here comes the css for the email.*/
+    body {
+      background-color: #F6F6F6;
+      color: #262626;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .content {
+      background-color: #FFFFFF;
+      width: 40%;
+      padding: 20px;
+    }
+
+    .btn {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 12px 24px;
+      margin-bottom: 0;
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      color: #FFFFFF;
+      background-color: #369AD9;
+    }
+
+    .btn:hover {
+      color: #333;
+      background-color: #e6e6e6;
+      border-color: #adadad;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div class="content">
+    <h1>Welcome <span th:text="${username}">username</span>!</h1>
+    <p>Your account is ready!</p>
+    <p>Please confirm your email address by clicking this button:</p>
+    <a class="btn" th:href="'http://localhost:8080/verify?token=' + ${verificationToken}">Confirm Email Address</a>
+    <p>- Team -</p>
+  </div>
+</main>
+</body>
+</html>
