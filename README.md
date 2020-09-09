@@ -5,7 +5,6 @@
  - [Dependencies](#dependencies)
  - [Environment variables](#environment-variables)
  - [Predefined user](#predefined-user)
- - [Usage without verification](#use-without-user-verification)
  - [Implemented Endpoints](#implemented-endpoints)
     - [POST /register](#post-register)
     - [POST /login](#post-login)
@@ -91,34 +90,6 @@ There is one predefined user in database which is free to use and you can test t
   | ------------- | ------------- |
   | user | fakePassword |
   
- #### Use without user verification
- 
- You can use easily this template without user verification. You have to provide some gibberish texts for "EMAIL_
- /*" environment variables and also you have to configure UserDetailsImpl.java.
- 
- You have to modify this implementation by change return value to "true". This means, Spring Security won't see
-  any user related fields to get the actual user is verified or not. Users will be always verified.
-  
-Original code:
- ```java
-UserDetailsImpl.java
-
-  @Override
-  public boolean isEnabled() {
-    return user.isVerified();
-  }
-```
-
-Use without verification:
- ```java
-UserDetailsImpl.java
-
-  @Override
-  public boolean isEnabled() {
-    return true;
-  }
-```
-
 #### Implemented endpoints
 
 #### POST /register
